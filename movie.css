@@ -13,26 +13,30 @@ body {
 #main-section {
     width: 800px;
     border: 4px gray solid;
-    border-radius: 20px;
+    border-radius: 23px;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
 #overall-rating {
     background-image: url("assets/homework2/rbg.png");
-    color: #FF0000;
-    font-weight: bold;
-    font-size: 48pt;
+    width: 100%;
     height: 83px;
+    border-radius: 20px 0 0 0;
+    display: flex;
+    align-items: center;
 }
 
-#feedback, #overview {
-    display: inline-block;
-    border-radius: 10px;
+#overal-score {
+    font-weight: bold;
+    font-size: 48pt;
+    color: #FF0000;
 }
 
 #feedback-section {
     margin: 0 auto;
+    padding: 10px 0;
 }
 
 .feedback-section-body {
@@ -43,11 +47,12 @@ body {
 }
 
 #feedback {
-    width: 68%;
+    width: 70%;
 }
 
 .feedback-owner {
     font-style: italic;
+    overflow: hidden;
 }
 
 #overview {
@@ -55,6 +60,11 @@ body {
     background-color: #A2B964;
     vertical-align: top;
     font-size: 9pt;
+    border-radius: 0 20px 20px 0 ;
+}
+
+dt {
+    font-weight: bold;
 }
 
 dl {
@@ -73,8 +83,9 @@ h1 {
     background-color: #E8DC9B;
     border: 2px gray solid;
     border-radius: 10px;
-    padding: 3px;
-    margin: 3px;
+    padding: 5px;
+    margin: 0 10px;
+    overflow: hidden;
 }
 
 #validator {
@@ -83,5 +94,19 @@ h1 {
 
 #navigation {
     text-align: center;
-    position: relative;
+}
+
+#poster {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto;
+    border-radius: 0 20px 0 0;
+}
+
+#rotten {
+    border-radius: 20px;
+}
+
+.feedback-photo {
+    float: left;
 }
