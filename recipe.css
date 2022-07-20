@@ -35,8 +35,7 @@ footer > pre {
 }
 
 .footer-image {
-    margin-left: auto;
-    display: block;
+    text-align: right;
 }
 
 .deleted-word {
@@ -57,6 +56,10 @@ ol > li > em {
 
 blockquote > p > em {
     font-weight: bold;
+}
+
+ul {
+    list-style-image: url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif");
 }
 
 li {
