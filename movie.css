@@ -1,0 +1,87 @@
+body {
+    background-image: url("assets/homework2/background.png");
+    font-size: 12pt;
+    font-family: Verdana, Tahoma, Arial;
+    margin: 0 auto;
+}
+
+#banner {
+    background-image: url("assets/homework2/bannerbg.png");
+    text-align: center;
+}
+
+#main-section {
+    width: 800px;
+    border: 4px gray solid;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#overall-rating {
+    background-image: url("assets/homework2/rbg.png");
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 48pt;
+    height: 83px;
+}
+
+#feedback, #overview {
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#feedback-section {
+    margin: 0 auto;
+}
+
+.feedback-section-body {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    font-size: 8pt;
+}
+
+#feedback {
+    width: 68%;
+}
+
+.feedback-owner {
+    font-style: italic;
+}
+
+#overview {
+    width: 30%;
+    background-color: #A2B964;
+    vertical-align: top;
+    font-size: 9pt;
+}
+
+dl {
+    padding: 10px;
+}
+
+h1 {
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, Arial;
+    text-shadow: 3px 3px #999999;
+    text-align: center;
+}
+
+.feedback-body {
+    background-color: #E8DC9B;
+    border: 2px gray solid;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 3px;
+}
+
+#validator {
+    text-align: right;
+}
+
+#navigation {
+    text-align: center;
+    position: relative;
+}
