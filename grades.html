@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grades form</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Retrieve your grade</h1>
+        <form action="http://mumstudents.org/params.php" method="POST">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" required /><br>
+            <hr>
+            <label for="studentid">Student ID</label><br>
+            <input type="number" id="studentid" required /><br>
+            <hr>
+            <label for="subject">Subject</label>
+            <select name="subject" id="subject">
+                <optgroup label="In Campuse">
+                    <option value="FPP" selected>FPP</option>
+                    <option value="MPP">MPP</option>
+                    <option value="WAP">WAP</option>
+                    <option value="WAA">WAA</option>
+                </optgroup>
+                <optgroup label="Distance">
+                    <option value="BigData">Big Data</option>
+                    <option value="SE">SE</option>
+                </optgroup>
+            </select><br>
+            <hr>
+            <label for="confirm">Are you sure that your looking your own grade?</label>
+            <input type="checkbox" id="confirm" required><br>
+            <hr>
+            <input type="submit" value="Get Grade!"> <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>
