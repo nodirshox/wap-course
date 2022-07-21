@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Nerds meeting portal</title>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div>
+            <span id="logo">nerd</span><span id="logo-part">Luv<sup>tm</sup></span>
+            <p id="description">where meek geeks meet</p>
+        </div>
+        <form action="http://mumstudents.org/params.php">
+            <fieldset>
+                <legend>New User Signup:</legend>
+                <div id="form-label">
+                    <div>
+                        <label for="name">Name:</label>
+                    </div>
+                    <div>
+                        <label for="gender">Gender:</label>
+                    </div>
+                    <div>
+                        <label for="age">Age:</label>
+                    </div>
+                    <div>
+                        <label for="personality">Personality type:</label>
+                    </div>
+                    <div>
+                        <label for="os">Favorite OS:</label>
+                    </div>
+                    <div>
+                        <label for="age">Seeking age:</label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Sign Up">
+                    </div>
+                </div>
+                <div id="form-input">
+                    <div>
+                        <input type="text" name="name" id="name" maxlength="16" required>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="male" value="male" /> <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female" checked/> <label for="female">Female</label> 
+                    </div>
+                    <div>
+                        <input type="number" name="age" id="age" min="1" max="99" maxlength="2" required />
+                    </div>
+                    <div>
+                        <input type="text" name="personality" id="personality" maxlength="6" required /> (<a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp">Don't know your type?</a>)
+                    </div>
+                    <div>
+                        <select name="os" id="os">
+                            <optgroup label="Legends">
+                                <option value="windows" selected>Windows</option>
+                                <option value="macos">Mac OS X</option>
+                            </optgroup>
+                            <optgroup label="Ultra Legends">
+                                <option value="linux">Linux</option>
+                            </optgroup>
+                        </select>    
+                    </div>
+                    <div>
+                        <input type="number" placeholder="min" min="1"  max="99" required /> to <input type="number" placeholder="max" min="1" max="99" required/> 
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <p>
+            This page is for single nerds to meet date each other! Type in your personal information and wait for the nerdly luv to begin! Thank you for using our site.
+        </p>
+
+        <p>
+            Results and page (C) Copyright NerdLuv Inc.
+        </p>
+
+        <div>
+            <a href="index.html"><img src="assets/html-form/back.png" id="back"> Back to front page</a>
+        </div>
+        <br>
+        <div id="validator">
+            <a href="https://validator.w3.org/check?uri=https://nodirshox.github.io/wap-course/signup.html"><img src="assets/w3c-html.png" alt="Valid HTML5" /></a>
+            <a href="https://validator.w3.org/check?uri=https://nodirshox.github.io/wap-course/signup.css"><img src="assets/w3c-css.png" alt="Valid CSS" /></a>
+        </div>
+    </body>
+</html>
