@@ -4,11 +4,11 @@ window.onload = function() {
 
 function addTask() {
     let task = document.getElementById("task-name").value;
-
     if (task.length === 0) {
         alert("Please enter text");
         return;
     }
+    task = task.trim();
 
     let history = localStorage.getItem("list");
     if (history == null) {
