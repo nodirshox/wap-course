@@ -5,11 +5,17 @@
 		<link href="tip.css" type="text/css" rel="stylesheet" />
 		<script>
 			function calcTip() {
-		
-			// Enter your code here to make Tip Calculator work
-			let subtotal = parseFloat(document.getElementById("subtotal").value);
+				// Enter your code here to make Tip Calculator work
+				let subtotal = parseFloat(document.getElementById("subtotal").value);
 				let tip = parseFloat(document.getElementById("tip").value);
 				
+				if (!subtotal) {
+					subtotal = 0;
+				}
+				if (!tip) {
+					tip = 0;
+				}
+
 				let totalSum = subtotal + subtotal * tip / 100;
 				
 				// check totalSum is integer, if yes add .00
