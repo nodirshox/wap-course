@@ -1,24 +1,29 @@
-
 <!DOCTYPE html>
-<html>
-	<!--
-	CSE 190M, Summer 2012
-	This file is a tip calculator page using JavaScript.
-	-->
-<script>
-function calcTip() {
-
-// Enter your code here to make Tip Calculator work
-
-}
-
-</script>
+<html lang="en">
 	<head>
 		<title>Tip Calculator</title>
 		<link href="tip.css" type="text/css" rel="stylesheet" />
-		<script src="tip.js" type="text/javascript"></script>
+		<script>
+			function calcTip() {
+		
+			// Enter your code here to make Tip Calculator work
+			let subtotal = parseFloat(document.getElementById("subtotal").value);
+				let tip = parseFloat(document.getElementById("tip").value);
+				
+				let totalSum = subtotal + subtotal * tip / 100;
+				
+				// check totalSum is integer, if yes add .00
+				// if totalSum has floating points, round by 2 decimal points
+				if (totalSum % 1 === 0) {
+					totalSum = totalSum + ".00";
+				} else {
+					totalSum = totalSum.toFixed(2);
+				}
+		
+				document.getElementById("total").innerHTML = "$" + totalSum;
+			}
+		</script>
 	</head>
-
 
 	<body>
 		<h1>
