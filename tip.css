@@ -9,3 +9,11 @@ body, input, button {
 div {
     margin: 0.5em;
 }
+
+#summary {
+    display: flex;
+}
+
+.part {
+    width: 50%;
+}
