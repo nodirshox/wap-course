@@ -1,0 +1,54 @@
+1. What is the difference between the following 2 statements?
+setTimeout(booyah, 2000);
+setTimeout(booyah(), 2000);
+-------------------------------
+Answer: In the first statement, it sets booyah function in to setTimeout function. 
+It executes after 2 seconds.
+In the second statement, it calls directly booyah function without waiting 2 seconds.
+-------------------------------
+
+2. What do the following 2 alerts display (answer without running the code)?
+var myfunc = function(a, x) {
+ return a * x;
+};
+var x = myfunc(2, 3);
+var y = myfunc;
+alert(x);
+alert(y(2,3)); 
+-------------------------------
+Answer: 
+6
+6
+-------------------------------
+
+3. Write functions booyah1 and booyah2 so that in both cases below, an alert 
+box comes up after 2 seconds that says “BOOYAH!”
+setTimeout(booyah1, 2000);
+setTimeout(booyah2(), 2000);
+-------------------------------
+Answer: 
+function booyah1() {
+    alert("BOOYAH!");
+}
+
+function booyah2() {
+    setTimeout(()=> {
+        alert("BOOYAH!");
+    }, 2000);
+}
+-------------------------------
+4. What is "Unobtrusive Javascript"? What is the practical application of 
+Unobtrusive Javascript (and the reasons for using it)?
+-------------------------------
+Answer: Unobtrusive Javascript is seperating code Javascript code from HTML.
+For example, if we add html tags and adds onclick="callFunction()" it not 
+Unobtrusive Javascript. We need write Javascript code to directly js file. 
+For example:
+HTML tag:
+<input type="button" id="special-button" />
+Javascript code:
+let element = document.getElementById("special-button");
+element.onclick = function() {
+    // logic is here
+};
+-------------------------------
