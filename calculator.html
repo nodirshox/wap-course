@@ -21,20 +21,19 @@
 
 				// check totalSum is integer, if yes add .00
 				// if totalSum has floating points, round by 2 decimal points
-				if (totalTip % 1 === 0) {
-					totalTip = totalTip + ".00";
-				} else {
-					totalTip = totalTip.toFixed(2);
-				}
-
-				if (totalSum % 1 === 0) {
-					totalSum = totalSum + ".00";
-				} else {
-					totalSum = totalSum.toFixed(2);
-				}
+				totalTip = roundNumber(totalTip);
+				totalSum = roundNumber(totalSum);
 				
 				document.getElementById("tip-total").innerHTML = "$" + totalTip
 				document.getElementById("total").innerHTML = "$" + totalSum;
+			}
+
+			function roundNumber(number) {
+				if (number % 1 === 0) {
+					return number + ".00";
+				}
+
+				return number.toFixed(2);
 			}
 		</script>
 	</head>
