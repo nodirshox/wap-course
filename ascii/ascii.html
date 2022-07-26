@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="ascii.css">
+        <title>ASCII Animation</title>
+    </head>
+    <body>
+        <h1>CS472: ASCII Animation Viewer</h1>
+        <div class="main">
+            <textarea cols="80" rows="20" id="mytextarea"></textarea>
+
+            <fieldset>
+                <legend>Play Controls:</legend>
+                <button id="start">Start</button>
+                <button id="stop" disabled>Stop</button>
+            </fieldset>
+            <fieldset>
+                <legend>Animation:</legend>
+                <select id="animationType">
+                    <option value="blank" selected>Blank</option>
+                    <option value="exercise">Exercise</option>
+                    <option value="juggler">Juggler</option>
+                    <option value="bike">Bike</option>
+                    <option value="dive">Dive</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Size:</legend>
+                <select id="changeSize">
+                    <option value="7">Tiny</option>
+                    <option value="10">Small</option>
+                    <option value="12" selected>Medium</option>
+                    <option value="16">Large</option>
+                    <option value="24">Extra Large</option>
+                    <option value="32">XXL</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Speed:</legend>
+                <input type="checkbox" id="speed">
+                <label for="speed">Turbo</label>
+            </fieldset>
+        </div>
+
+        <div class="validator">
+            <a href="https://validator.w3.org/check?uri=https://nodirshox.github.io/wap-course/ascii/ascii.html"><img src="../assets/w3c-html.png" alt="Valid HTML5" /></a> <br />
+            <a href="https://validator.w3.org/check?uri=https://nodirshox.github.io/wap-course/ascii/ascii.css"><img src="../assets/w3c-css.png" alt="Valid CSS" /></a>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="animation.js"></script>
+        <script src="ascii.js"></script>
+    </body>
+</html>
