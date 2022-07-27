@@ -1,0 +1,62 @@
+1. Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, if
+they are. Explain why they can have different parameters and be equivalent, if they are equivalent.
+
+//code fragment 1
+$("li").each(function(idx, e) {
+    $(e).css(“color”, “yellow”);
+});
+//code fragment 2
+$("li").each(function() {
+    $(this).css(“color”, “yellow”);
+});
+//code fragment 3
+$("li").each(function(idx) {
+    $(this).css(“color”, “yellow”);
+});
+
+Answer: All three code examples do the same job which change color of all <li> tag texts.
+All they have different parameters.
+1-code has index of each <li> element, and element itself.
+2-code does not have any parameters. Because they are optional. So it uses "this" to access element.
+3-code has only index of each element. It also uses "this" element for accessing.
+
+-------------------
+2. Write a jQuery expression to find all divs on a page that include an unordered list in them, and make
+their text color be blue.
+
+<body>
+    <div>no ul here </div>
+    <div>
+        This does contain a ul.
+        <ul>
+            <li>the first item</li>
+            <li>the second item</li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("div ul").css("color", "blue");
+        });
+    </script>
+</body>
+
+-------------------
+3. Write jQuery code to append the following div element (and all of its contents) dynamically to the body
+element.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS Bin</title>
+    </head>
+    <body>
+
+        <script>
+        $(document).ready(function() {
+            $("body").append("<div><h1>JQuery Core</h1></div>");
+        });
+        </script>
+    </body>
+</html> 
