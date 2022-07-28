@@ -14,6 +14,9 @@ function sendRequest() {
         dataType: "json",
         data: body,
         contentType: "application/json",
+        beforeSend: () => {
+            $("#result").empty().append("<p>Waiting...</p>");
+        },
         success: (response) => {
             populateData(response);
         },
