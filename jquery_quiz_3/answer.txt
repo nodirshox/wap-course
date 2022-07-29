@@ -21,12 +21,10 @@ html of the last paragraph to show it is just text (the red bold is gone).
         <p></p>
         
         <script>
-        $(document).ready(function() {
             $(document).ready(function() {
                 $m = $("p").first().detach();
                 $("p").last().append($m.text());
             });
-        });
         </script>
     </body>
 </html>
