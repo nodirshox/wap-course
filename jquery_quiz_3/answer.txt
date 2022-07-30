@@ -22,8 +22,8 @@ html of the last paragraph to show it is just text (the red bold is gone).
         
         <script>
             $(document).ready(function() {
-                $m = $("p").first().detach();
-                $("p").last().append($m.text());
+                var m = $("p").first().text();
+                $("p").last().html(m);
             });
         </script>
     </body>
@@ -51,7 +51,7 @@ html of the last paragraph to show it is just text (the red bold is gone).
 
 <script>
     $(document).ready(function() {
-        $("ul").children().first().next().css("background-color", "red");
+        $("li.item-a").parent().css("background-color", "red");
     });
 </script>
 
@@ -80,7 +80,11 @@ described in Chapter 4 of Head First jQuery: "Turkey" in the ingredient list of 
 these items in the list. Describe the changes to the Javascript (jQuery) code to implement this new
 requirement.
 
-$(".turkey").replaceWith("<li class='mashed-potato'><em>Mashed Potatoes</em></li>");
+To "Go Vegetarian" menu button
+$(".turkey").replaceWith("<li class='mashed'><em>Mashed Potatoes</em></li>");
+
+To "Restore" menu button
+$(".mashed").replaceWith("<li class='turkey'><em>Turkey</em></li>");
 
 ---------------------------
 5. Write Javascript (jQuery) code to change the color of the parent and grandparent
@@ -97,6 +101,6 @@ list items of the span of text ("some text") in the following to green.
 
 <script>
     $(document).ready(function() {
-        $(".ancestors div ul").css("background-color", "green");
+        $(".ancestors div ul").css("color", "green");
     });
 </script>
