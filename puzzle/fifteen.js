@@ -77,8 +77,6 @@ $(document).ready(() => {
             let tempX = current[0].x;
             let tempY = current[0].y;
 
-            let newPosition = $(this).attr("position").split("-");
-            $(this).attr("oldPosition", `${newPosition[0]}-${newPosition[1]}`);
             $(this).attr("position", `${tempX}-${tempY}`);
             $(this).css("left", `${tempX}px`);
             $(this).css("top", `${tempY}px`);
@@ -109,7 +107,9 @@ function setPosition() {
         let y = (Math.floor(i / 4) * 100) ;
 
         div.attr("position", `${x}-${y}`);
-        div.attr("oldPosition", `${x}-${y}`);
+
+        // set basic style and background
+        applyBackground(div, x, y);
     });
 }
 
@@ -118,7 +118,7 @@ function setListener() {
         let div = $(this);
 
         // calculate x and y for this piece
-        let newPosition = $(this).attr("oldPosition").split("-")
+        let newPosition = $(this).attr("position").split("-")
         // store x and y for later
         div.x = newPosition[0];
         div.y = newPosition[1];
@@ -139,9 +139,6 @@ function setListener() {
             }
         });
 
-        // set basic style and background
-        applyBackground(div, newPosition[0], newPosition[1]);
-
         if (newPosition[0] == empty.x && newPosition[1] == empty.y) {
             clearBox(div);
         }
@@ -157,16 +154,6 @@ function setListener() {
                 $(this).html(content);
             }
         })
-    }
-
-    function applyBackground(div, x, y) {
-        div.addClass("puzzlepiece");
-        div.css({
-            "left": x + 'px',
-            "top": y + 'px',
-            "backgroundImage": 'url("background.jpg")',
-            "backgroundPosition": -x + 'px ' + (-y) + 'px'
-        });
     }
 
     function clearBox(div) {
@@ -194,4 +181,14 @@ function setListener() {
         }
         return result;
     }
+}
+
+function applyBackground(div, x, y) {
+    div.addClass("puzzlepiece");
+    div.css({
+        "left": x + 'px',
+        "top": y + 'px',
+        "backgroundImage": 'url("background.jpg")',
+        "backgroundPosition": -x + 'px ' + (-y) + 'px'
+    });
 }
