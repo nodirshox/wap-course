@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fifteen Puzzle</title>
+		<link href="fifteen.css" type="text/css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<h1>CSE 190 M Fifteen Puzzle</h1>
+
+		<p>
+			The goal of the fifteen puzzle is to un-jumble its fifteen squares
+			by repeatedly making moves that slide squares into the empty space.
+			How quickly can you solve it?
+		</p>
+
+		<div id="puzzlearea">
+			<div>1</div>  <div>2</div>  <div>3</div>  <div>4</div>
+			<div>5</div> <div>6</div> <div>7</div>  <div>8</div>
+			<div>9</div>  <div>10</div> <div>11</div> <div>12</div>
+			<div>13</div> <div>14</div> <div>15</div> <div empty="true"></div>
+		</div>
+
+		<p id="controls">
+			<button id="shufflebutton">Shuffle</button>
+		</p>
+		
+		<p>
+			American puzzle author and mathematician Sam Loyd is often falsely
+			credited with creating the puzzle; indeed, Loyd claimed from 1891
+			until his death in 1911 that he invented it.
+			The puzzle was actually created around 1874 by Noyes Palmer Chapman,
+			a postmaster in Canastota, New York.
+		</p>
+
+		<div id="w3c">
+			<a href="https://validator.w3.org/check?uri=https://nodirshox.github.io/wap-course/puzzle/index.html">
+				<img src="../assets/w3c-html.png" alt="Valid HTML" /></a>
+			<a href="https://validator.w3.org/check?uri=https://nodirshox.github.io/wap-course/puzzle/fifteen.css">
+				<img src="../assets/w3c-css.png" alt="Valid CSS" /></a>
+		</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="fifteen.js" type="text/javascript"></script>
+	</body>
+</html>
